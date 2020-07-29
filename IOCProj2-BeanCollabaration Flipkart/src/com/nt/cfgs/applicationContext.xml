@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans https://www.springframework.org/schema/beans/spring-beans-4.3.xsd">
+<!-- <dependet> -->
+<bean id="gpay" class="com.nt.beans.GooglePay"/>
+<bean id="ppay" class="com.nt.beans.PhonePay"/>
+<bean id="dtdc" class="com.nt.beans.DTDC"/>
+<bean id="bdt" class="com.nt.beans.BlueDart"/>
+<!-- <Target> -->
+<bean id="fpk" class="com.nt.beans.Flipkart">
+<property name="payment"><ref bean="ppay"/></property>
+<!-- <property name="payment"><ref bean="gpay"/></property> -->
+<!-- <property name="courier"><ref bean="bdt"/></property> -->
+<property name="courier"><ref bean="dtdc"/></property>
+</bean>
+</beans>
