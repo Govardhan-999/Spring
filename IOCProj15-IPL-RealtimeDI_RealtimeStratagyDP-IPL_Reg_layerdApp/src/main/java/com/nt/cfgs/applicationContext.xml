@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+<!-- cfg data source -->
+<bean id="drds" class="org.springframework.jdbc.datasource.DriverManagerDataSource">
+<property name="driverClassName" value="oracle.jdbc.driver.OracleDriver"/>
+<property name="url" value="jdbc:oracle:thin:@localhost:1521:xe"/>
+<property name="username" value="Govardhan"/>
+<property name="password" value="anurag"/>
+</bean>
+<!--cfg dao  -->
+<bean id="plDAO"  class="com.nt.dao.PlayerDAOimpl">
+<constructor-arg ref="drds"/>
+</bean>
+<!--cfg service  -->
+<bean id="plService"  class="com.nt.service.PlayerRegServiceImpl">
+<constructor-arg ref="plDAO"/>
+</bean>
+<bean id="controller"  class="com.nt.controller.MainController">
+<constructor-arg ref="plService"/>
+</bean>
+</beans>
+  
