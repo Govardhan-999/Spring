@@ -56,9 +56,8 @@ public class RealTimeDITest1 {
 		 catch(Exception e)
 		 {
 			System.out.println("internal problem");
-			 e.printStackTrace();
+			 e.printStackTrace(); 
+			 }
 		 }
 	}
-
-}
 
