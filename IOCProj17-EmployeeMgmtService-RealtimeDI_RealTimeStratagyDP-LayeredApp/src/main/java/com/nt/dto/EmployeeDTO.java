@@ -1,6 +1,8 @@
 package com.nt.dto;
 
-public class EmployeeDTO {
+import java.io.Serializable;
+
+public class EmployeeDTO implements Serializable {
 
 	private String eName;
 	private String eAdd;

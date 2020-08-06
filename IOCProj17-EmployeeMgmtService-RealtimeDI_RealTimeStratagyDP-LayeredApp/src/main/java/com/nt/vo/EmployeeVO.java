@@ -1,6 +1,6 @@
 package com.nt.vo;
 
-public class EmplpoyeeVO {
+public class EmployeeVO {
 
 	private String eName;
 	private String eId;
