@@ -11,6 +11,10 @@ plugins {
     id 'application'
 }
 
+mainClassName="com.nt.test.RealTimeDITest"
+run{
+standardInput=System.in
+}
 repositories {
  mavenCentral()    
 }

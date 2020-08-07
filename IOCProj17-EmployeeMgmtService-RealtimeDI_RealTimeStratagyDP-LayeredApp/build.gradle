@@ -10,7 +10,10 @@ plugins {
     // Apply the java-library plugin to add support for Java Library
     id 'application'
 }
-
+mainClassName="com.nt.test.RealTimeDITest"
+run{
+standardInput=System.in
+}
 repositories {
  mavenCentral()    
 }
