@@ -25,8 +25,8 @@ public final class EmployeeMgmtServiceImpl implements EmployeeMgmtService {
 		float nSalary = 0.0f;
 		float da = (10 * dto.geteBasicSalary()) / 100;
 		float hra = (10 * dto.geteBasicSalary()) / 100;
-		float pf = (10 * dto.geteBasicSalary()) / 100;
-		float it = (10 * dto.geteBasicSalary()) / 100;
+		float pf = (7 * dto.geteBasicSalary()) / 100;
+		float it = (5 * dto.geteBasicSalary()) / 100;
 		float deductions = pf + it;
 		gSalary = dto.geteBasicSalary() + da + hra;
 		nSalary = gSalary - deductions;
